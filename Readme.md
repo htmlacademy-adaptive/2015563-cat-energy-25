@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [ROBINSON ELENA](https://up.htmlacademy.ru/adaptive/25/user/2015563).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Савотиков](https://htmlacademy.ru/profile/id98316).
 
 ---
 
