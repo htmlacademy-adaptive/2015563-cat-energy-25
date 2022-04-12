@@ -1,0 +1,36 @@
+@padding-main: 0 20px;
+@font-main: "Oswald", sans-serif;
+@font-second: "Arial", sans-serif;
+@color-main: #000000;
+@color-main-light: #ffffff;
+@color-base: #444444;
+@basic-green: #68b738;
+@basic-grey: #f2f2f2;
+
+*,
+*::before,
+*after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: @font-main;
+  font-style: normal;
+  font-weight: 400;
+  color: @color-main;
+  background-color: @color-main-light;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
