@@ -35,10 +35,10 @@
     </header>
 
     <main class="page__main">
-      <section class="header">
-        <div class="header__wrapper">
-          <h1 class="header__title">Подбор программы</h1>
-          <p class="header__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <section class="header-form">
+        <div class="header-form__wrapper">
+          <h1 class="header-form__tit">Подбор программы</h1>
+          <p class="header-form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         </div>
       </section>
 
@@ -83,8 +83,9 @@
           <input class="survey-form__input" type="email" id="contact-email" name="contact-email" placeholder="KUKLACHEV@GMAIL.COM" required>
           <label class="survey-form__label" for="contact-phone">Телефон:*</label>
           <input class="survey-form__input" type="tel" id="contact-phone" name="contact-phone" placeholder="8(960)900-60-90" required>
-          <label class="survey-form__label" for="comment">Комментарий</label>
-          <textarea class="survey-form__text" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <p class="survey-form__title">Комментарий</p>
+          <label class="visually-hidden" for="comment">Напишите комментарий.</label>
+          <textarea class="survey-form__text" id="comment" name="comment" rows="8" cols="40" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
         <div class="survey-form__set">
           <p class="survey-form__title">Дополнительно</p>
@@ -93,39 +94,39 @@
               <label class="survey-form__label">
                 <input class="visually-hidden survey-form__input" type="checkbox" name="sweetener" checked>
                 <span class="survey-form__mark"></span>
-                <span class="survey-form__tag">Сахарозаменитель</span>
+                <span class="survey-form__tag survey-form__tag--black">Сахарозаменитель</span>
               </label>
             </li>
             <li class="survey-form__item">
               <label class="survey-form__label">
                 <input class="visually-hidden survey-form__input" type="checkbox" name="drinking-water">
                 <span class="survey-form__mark"></span>
-                <span class="survey-form__tag">Питьевая вода</span>
+                <span class="survey-form__tag survey-form__tag--black">Питьевая вода</span>
               </label>
             </li>
             <li class="set-survey-form__item">
               <label class="survey-form__label">
                 <input class="visually-hidden survey-form__input" type="checkbox" name="milk">
                 <span class="survey-form__mark"></span>
-                <span class="survey-form__tag">Молоко</span>
+                <span class="survey-form__tag survey-form__tag--black">Молоко</span>
               </label>
             </li>
             <li class="survey-form__item">
               <label class="survey-form__label">
                 <input class="visually-hidden survey-form__input" type="checkbox" name="vitamins">
                 <span class="survey-form__mark"></span>
-                <span class="survey-form__tag">Витамины</span>
+                <span class="survey-form__tag survey-form__tag--black">Витамины</span>
               </label>
             </li>
           </ul>
         </div>
         <button class="button survey-form__button" type="submit">Отправить заявку</button>
-        <span class="survey-form__note">* — Обязательные поля</span>
+        <p class="survey-form__note">* — Обязательные поля</p>
       </form>
 
-      <section class="location">
+      <section class="location location--dark">
         <div class="location__wrapper">
-          <h2 class="location__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <h2 class="location__tit">Приглашаем к сотрудничеству дилеров!</h2>
           <div class="location__address">
             <p class="location__street">ул. Большая Конюшенная, д. 19/8</p>
             <p class="location__city">Санкт-Петербург</p>
