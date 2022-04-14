@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body class="page__body">
@@ -34,16 +35,14 @@
     </header>
 
     <main class="page__main">
-      <section class="header">
-        <div class="header__wrapper">
-          <h1 class="header__title">Каталог продукции</h1>
+      <section class="header-inner">
+        <div class="header-inner__wrapper">
+          <h1 class="header-inner__title">Каталог продукции</h1>
         </div>
       </section>
 
       <section class="catalog">
-        <header class="catalog__header">
-          <h2 class="catalog__title">Основные товары товары</h2>
-        </header>
+        <h2 class="visually-hidden">Основные товары</h2>
         <div class="catalog__wrapper">
           <ul class="catalog__list">
             <li class="catalog__item">
@@ -67,7 +66,7 @@
                   <td class="catalog__value">700 р</td>
                 </tr>
               </table>
-              <a class="catalog__order button" href="">Заказать</a>
+              <a class="button catalog__order-btn" href="">Заказать</a>
             </li>
             <li class="catalog__item">
               <a class="catalog__image-link" href="#">
@@ -90,7 +89,7 @@
                   <td class="catalog__value">1000 р</td>
                 </tr>
               </table>
-              <a class="catalog__order button" href="">Заказать</a>
+              <a class="button catalog__order-btn" href="">Заказать</a>
             </li>
             <li class="catalog__item">
               <a class="catalog__image-link" href="#">
@@ -113,7 +112,7 @@
                   <td class="catalog__value">700 р</td>
                 </tr>
               </table>
-              <a class="catalog__order button" href="">Заказать</a>
+              <a class="button catalog__order-btn" href="">Заказать</a>
             </li>
             <li class="catalog__item">
               <a class="catalog__image-link" href="#">
@@ -136,7 +135,7 @@
                   <td class="catalog__value">1000 р</td>
                 </tr>
               </table>
-              <a class="catalog__order button" href="">Заказать</a>
+              <a class="button catalog__order-btn" href="">Заказать</a>
             </li>
             <li class="catalog__item">
               <a class="catalog__image-link" href="#">
@@ -159,7 +158,7 @@
                   <td class="catalog__value">400 р</td>
                 </tr>
               </table>
-              <a class="catalog__order button" href="">Заказать</a>
+              <a class="button catalog__order-btn" href="">Заказать</a>
             </li>
             <li class="catalog__item">
               <a class="catalog__image-link" href="#">
@@ -182,7 +181,7 @@
                   <td class="catalog__value">700 р</td>
                 </tr>
               </table>
-              <a class="catalog__order button" href="">Заказать</a>
+              <a class="button catalog__order-btn" href="">Заказать</a>
             </li>
             <li class="catalog__item">
               <a class="catalog__image-link" href="#">
@@ -205,13 +204,13 @@
                   <td class="catalog__value">500 р</td>
                 </tr>
               </table>
-              <a class="catalog__order button" href="">Заказать</a>
+              <a class="button catalog__order-btn" href="">Заказать</a>
             </li>
             <li class="catalog__item all-list">
               <div class="all-list__inner">
                 <p class="all-list__title">Показать еще 100500 товаров</p>
                 <p class="all-list__text">На самом деле вкусов гораздо больше!</p>
-                <a class="all-list__show-more button button--light" href="">Показать все</a>
+                <a class="button all-list__show-more button--light" href="">Показать все</a>
               </div>
             </li>
           </ul>
@@ -219,50 +218,50 @@
       </section>
 
       <section class="add-catalog">
-        <header class="add-catalog__header">
+        <div class="add-catalog__header">
           <h2 class="add-catalog__title">Дополнительные товары</h2>
-        </header>
+        </div>
         <div class="add-catalog__wrapper">
           <ul class="add-catalog__list">
             <li class="add-catalog__item">
-              <p class="add-catalog__title">Сахарозаменитель</p>
+              <p class="add-catalog__item-title">Сахарозаменитель</p>
               <table class="add-catalog__content">
                 <tr>
                   <td class="add-catalog__option">1 упаковка (100 г)</td>
                   <td class="add-catalog__value">200 Р.</td>
                 </tr>
               </table>
-              <a class="add-catalog button" href="">Заказать</a>
+              <a class="button add-catalog__order-btn" href="">Заказать</a>
             </li>
             <li class="add-catalog__item">
-              <p class="add-catalog__title">Питьевая вода</p>
+              <p class="add-catalog__item-title">Питьевая вода</p>
               <table class="add-catalog__content">
                 <tr>
                   <td class="add-catalog__option">5 литров</td>
                   <td class="add-catalog__value">50 Р.</td>
                 </tr>
               </table>
-              <a class="add-catalog button" href="">Заказать</a>
+              <a class="button add-catalog__order-btn" href="">Заказать</a>
             </li>
             <li class="add-catalog__item">
-              <p class="add-catalog__title">Молоко</p>
+              <p class="add-catalog__item-title">Молоко</p>
               <table class="add-catalog__content">
                 <tr>
                   <td class="add-catalog__option">1 литр</td>
                   <td class="add-catalog__value">100 Р.</td>
                 </tr>
               </table>
-              <a class="add-catalog button" href="">Заказать</a>
+              <a class="button add-catalog__order-btn" href="">Заказать</a>
             </li>
             <li class="add-catalog__item">
-              <p class="add-catalog__title">Витамины</p>
+              <p class="add-catalog__item-title">Витамины</p>
               <table class="add-catalog__content">
                 <tr>
                   <td class="add-catalog__option">1 упаковка (30 г)</td>
                   <td class="add-catalog__value">300 Р.</td>
                 </tr>
               </table>
-              <a class="add-catalog button" href="">Заказать</a>
+              <a class="button add-catalog__order-btn" href="">Заказать</a>
             </li>
           </ul>
         </div>
@@ -271,11 +270,11 @@
       <section class="gift">
         <div class="gift__wrapper">
           <h2 class="visually-hidden">Подарок для вас!</h2>
-          <p class="gift__text">Закажите все и получите чехол для кота в подарок!</p>
+          <p class="gift__text">Закажите все<br>и получите чехол для кота в подарок!</p>
         </div>
       </section>
 
-      <section class="location">
+      <section class="location location--dark">
         <div class="location__wrapper">
           <h2 class="location__title">Приглашаем к сотрудничеству дилеров!</h2>
           <div class="location__address">
