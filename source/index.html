@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -13,34 +14,36 @@
           <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип.">
           <img class="logo__title" src="img/logo-title.svg" width="101" high="18" alt="Магазин Кэт энерджи.">
         </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="form.html">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
       </div>
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main class="page__main">
       <section class="header">
         <div class="header__wrapper">
-          <h1 class="header__title">Функциональное питание для котов</h1>
+          <h1 class="header__title">Функциональное<br>питание для котов</h1>
           <p class="header__text">Занялся собой? Займись котом!</p>
         </div>
-        <a class="header__link" href="form.html">Подобрать программу</a>
+        <div class="header__wrapper-link">
+          <a class="header__link" href="form.html">Подобрать программу</a>
+        </div>
       </section>
 
       <section class="program">

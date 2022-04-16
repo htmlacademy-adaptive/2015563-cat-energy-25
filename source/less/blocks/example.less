@@ -1,10 +1,27 @@
 .example {
   padding: @padding-main;
   background-color: @light-grey;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    background-color: @color-main-light;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
 }
 
 .example__wrapper {
   padding: 25px 0 40px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 43px 0 65px;
+  }
 }
 
 .example__title {
@@ -13,6 +30,16 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .example__description {
@@ -23,6 +50,21 @@
   line-height: 18px;
   font-weight: 400;
   color: @color-base;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 70px 784px 0 0;
+    margin-bottom: 69px;
+  }
+}
+
+.example__list {
+  margin: 0;
 }
 
 .example__number {
@@ -32,6 +74,11 @@
   font-weight: 400;
   color: @color-base;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__desc {
@@ -40,6 +87,11 @@
   line-height: 100%;
   font-weight: 400;
   color: @color-base;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .example__text {
@@ -50,6 +102,12 @@
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 267px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .example__range {
@@ -62,4 +120,10 @@
   text-transform: uppercase;
   border: none;
   background-color: @light-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    background-color: @color-main-light;
+  }
 }
