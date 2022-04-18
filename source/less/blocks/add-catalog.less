@@ -1,5 +1,15 @@
 .add-catalog {
   padding: @padding-main;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding: 0 0;
+    margin: 0 auto;
+  }
 }
 
 .add-catalog__title {
@@ -7,6 +17,12 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    margin: 27px 0 80px 37px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .add-catalog__list {
@@ -16,6 +32,10 @@
 
 .add-catalog__item {
   padding: 13px 0 19px;
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 38px 28px;
+  }
 }
 
 .add-catalog__item-title {
@@ -46,4 +66,12 @@
 
 .add-catalog__order-btn {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 632px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+  }
 }

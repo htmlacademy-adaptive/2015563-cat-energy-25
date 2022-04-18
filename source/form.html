@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -13,31 +14,31 @@
           <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип.">
           <img class="logo__title" src="img/logo-title.svg" width="101" high="18" alt="Магазин Кэт энерджи.">
         </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
       </div>
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main class="page__main">
       <section class="header-inner">
         <div class="header-inner__wrapper">
-          <h1 class="header-inner__title header-inner__title--form">Подбор программы</h1>
+          <h1 class="header-inner__title">Подбор программы</h1>
           <p class="header-inner__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         </div>
       </section>
@@ -83,6 +84,8 @@
           <input class="survey-form__input" type="email" id="contact-email" name="contact-email" placeholder="KUKLACHEV@GMAIL.COM" required>
           <label class="survey-form__label" for="contact-phone">Телефон:*</label>
           <input class="survey-form__input" type="tel" id="contact-phone" name="contact-phone" placeholder="8(960)900-60-90" required>
+        </div>
+        <div class="survey-form__set">
           <p class="survey-form__title">Комментарий</p>
           <label class="visually-hidden" for="comment">Напишите комментарий.</label>
           <textarea class="survey-form__textarea" id="comment" name="comment" rows="8" cols="40" placeholder="Расскажите обо всех повадках кота"></textarea>
@@ -120,8 +123,10 @@
             </li>
           </ul>
         </div>
-        <button class="button survey-form__btn" type="submit">Отправить заявку</button>
-        <p class="survey-form__note">* — Обязательные поля</p>
+        <div class="survey-form__wrapper">
+          <button class="button survey-form__btn" type="submit">Отправить заявку</button>
+          <p class="survey-form__note">* — Обязательные поля</p>
+        </div>
       </form>
 
       <section class="location location--dark">

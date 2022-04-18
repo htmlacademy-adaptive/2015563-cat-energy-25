@@ -1,5 +1,7 @@
 .button {
   display: block;
+  width: 280px;
+  height: 40px;
   font-family: @font-oswald;
   font-size: 16px;
   line-height: 20px;
@@ -16,4 +18,12 @@
 .button--light {
   color: @color-base;
   background-color: @basic-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 248px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 168px;
+  }
 }

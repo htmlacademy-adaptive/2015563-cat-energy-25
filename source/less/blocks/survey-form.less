@@ -1,5 +1,27 @@
 .survey-form {
   padding: @padding-main;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding: 0 0;
+    margin: 0 auto;
+  }
+}
+
+.survey-form__set {
+  padding: 23px 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 65px 40px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 66px 0 3px 0;
+  }
 }
 
 .survey-form__label {
@@ -9,6 +31,11 @@
   align-items: center;
   color: @color-base;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .survey-form__input {
@@ -21,6 +48,11 @@
   color: @color-base;
   text-transform: uppercase;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .survey-form__list {
@@ -42,6 +74,11 @@
   &--black {
     color: @color-main;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .survey-form__title {
@@ -50,6 +87,11 @@
   line-height: 26px;
   font-weight: 400;
   color: @color-main;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .survey-form__textarea {
@@ -61,19 +103,54 @@
   text-align: center;
   color: @color-base;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.survey-form__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 34px 0 32px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    margin: 54px 40px 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 58px 0 80px;
+  }
 }
 
 .survey-form__btn {
-  display: block;
-  margin-bottom: 21px;
-  width: 100%;
+  margin: 0 auto 21px;
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
+    height: 52px;
+    margin: 0 61px 0 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    margin-right: 81px;
+  }
 }
 
 .survey-form__note {
-  margin: 0 0 32px;
+  margin: 0;
   font-family: @font-arial;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
 }
