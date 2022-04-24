@@ -17,27 +17,39 @@
 }
 
 .location__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 26px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 56px 0;
+    padding: 56px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 565px;
+    padding: 56px 80px;
   }
 }
 
 .location__title {
+  width: 50%;
   margin: 0;
+  padding-right: 10px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    width: 160px;
     font-size: 20px;
     line-height: 26px;
   }
 }
 
 .location__address {
+  width: 50%;
   font-family: @font-arial;
   font-size: 14px;
   line-height: 20px;
@@ -45,6 +57,19 @@
   color: @color-base;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 160px;
     font-size: 16px;
   }
+}
+
+.location__street {
+  margin: 0;
+}
+
+.location__city {
+  margin: 0;
 }

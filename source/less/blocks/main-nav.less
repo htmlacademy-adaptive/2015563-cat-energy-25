@@ -1,12 +1,97 @@
+.main-nav {
+  position: relative;
+  width: auto;
+  background-color: @color-main-light;
+
+  @media (min-width: @tablet-width) {
+    min-height: auto;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -46px;
+  right: 20px;
+  z-index: 2;
+  display: block;
+  width: 24px;
+  height: 18px;
+  padding: 0;
+  background-color: @color-main-light;
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  display: block;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background-color: @color-main;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 24px;
+    height: 2px;
+    background-color: @color-main;
+    box-shadow: 0 6px 0 0 @color-main, 0 12px 0 0 @color-main;
+  }
+}
+
+.main-nav--closed .main-nav__list {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__list {
+  display: block;
+}
+
 .main-nav__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
+    position: static;
     display: flex;
     justify-content: space-between;
-    width: 400px;
+    width: 450px;
   }
 
   @media (min-width: @desktop-width) {
@@ -14,13 +99,9 @@
   }
 }
 
-.main-nav__item {
-  text-align: center;
-}
-
-
-.main-nav__link {
-  display: inline-block;
+.main-nav__list a {
+  position: relative;
+  display: block;
   padding: 22px;
   font-size: 20px;
   line-height: 20px;
@@ -28,6 +109,42 @@
   color: @color-main;
   text-decoration: none;
   text-transform: uppercase;
+  background-color: @color-main-light;
+  border-top: 1px solid @light-base;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    border-top: none;
+  }
+}
+
+.main-nav__item {
+  text-align: center;
+
+  &--active {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -10px;
+      left: 0;
+      height: 2px;
+      background: @basic-green;
+    }
+  }
+}
+
+.main-nav__link {
+  display: block;
 
   @media (min-width: @tablet-width) {
     padding: 8px 0;

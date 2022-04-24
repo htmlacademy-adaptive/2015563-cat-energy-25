@@ -10,4 +10,26 @@
   line-height: 18px;
   font-weight: 400;
   color: @color-base;
+  align-items: center;
+
+  &:active {
+    opacity: 30%;
+  }
+}
+
+.developer__icon {
+  fill: @special-grey2;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 22px;
+  }
+
+  &:hover {
+    fill: @basic-green;
+  }
+
+  &:active {
+    fill: @basic-green;
+    opacity: 30%;
+  }
 }
