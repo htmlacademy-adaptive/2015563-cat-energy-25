@@ -1,27 +1,29 @@
+.logo {
+  &:hover .logo__image {
+    opacity: 80%;
+  }
+
+  &:hover .logo__image {
+    opacity: 60%;
+  }
+}
+
 .logo__image {
   width: 33px;
   height: 38px;
   margin-right: 56px;
+}
 
-  &:hover {
+.logo__title {
+  &:hover .logo__title-image {
     opacity: 80%;
-    cursor: pointer;
   }
 
-  &:active {
+  &:hover .logo__title-image {
     opacity: 60%;
   }
 }
 
 .logo__title-image {
   align-items: center;
-
-  &:hover {
-    opacity: 80%;
-    cursor: pointer;
-  }
-
-  &:active {
-    opacity: 60%;
-  }
 }

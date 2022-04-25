@@ -48,6 +48,7 @@
   line-height: 18px;
   font-weight: 400;
   align-items: center;
+  text-align: left;
 
   &::before {
     content: "";
@@ -56,68 +57,44 @@
     top: 0;
     left: 0;
     width: 60px;
-    min-height: 60px;
+    height: 60px;
     background-color: @basic-green;
     background-image: url("../img/health.svg");
     background-repeat: no-repeat;
   }
 
+  &:nth-child(2)::before {
+    background-image: url("../img/ready.svg");
+  }
+
+  &:nth-child(3)::before {
+    background-image: url("../img/nutrition.svg");
+  }
+
+  &:nth-child(4)::before {
+    background-image: url("../img/effect.svg");
+  }
+
   @media (min-width: @tablet-width) {
-    width: 230px;
+    width: 354px;
     margin-bottom: 37px;
-    margin-right: 152px;
     padding: 111px 0 0;
     font-size: 16px;
     line-height: 24px;
-
-    &:nth-child(2) {
-      width: 246px;
-      margin-right: 77px;
-    }
-
-    &:nth-child(3) {
-      width: 247px;
-      margin-right: 135px;
-    }
-
-    &:nth-child(4) {
-      width: 249px;
-      margin-right: 0;
-    }
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 92px;
-    margin-bottom: 0;
+    width: 250px;
 
-    &:nth-child(2) {
-      margin-right: 77px;
-    }
-
-    &:nth-child(3) {
-      margin-right: 75px;
-    }
-
-    &:nth-child(4) {
-      margin-right: 0;
+    &:not(:last-child) {
+      margin-right: 64px;
     }
   }
-}
-
-&:nth-child(2)::before {
-  background-image: url("../img/ready.svg");
-}
-
-&:nth-child(3)::before {
-  background-image: url("../img/nutrition.svg");
-}
-
-&:nth-child(4)::before {
-  background-image: url("../img/effect.svg");
 }
 
 .advantages__number {
   position: absolute;
+  display: none;
   bottom: 0;
   left: 116px;
   font-family: @font-oswald;
@@ -125,10 +102,9 @@
   line-height: 280px;
   color: @basic-grey;
   z-index: -1;
-  visibility: hidden;
 
   @media (min-width: @tablet-width) {
-    visibility: visible;
+    display: block;
   }
 }
 

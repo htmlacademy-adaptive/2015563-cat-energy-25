@@ -2,6 +2,19 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+
+  &:hover .developer__title {
+    opacity: 30%;
+  }
+
+  &:hover .developer__icon {
+    fill: @basic-green;
+  }
+
+  &:active .developer__icon {
+    fill: @basic-green;
+    opacity: 30%;
+  }
 }
 
 .developer__title {
@@ -11,10 +24,6 @@
   font-weight: 400;
   color: @color-base;
   align-items: center;
-
-  &:active {
-    opacity: 30%;
-  }
 }
 
 .developer__icon {
@@ -24,12 +33,4 @@
     margin-left: 22px;
   }
 
-  &:hover {
-    fill: @basic-green;
-  }
-
-  &:active {
-    fill: @basic-green;
-    opacity: 30%;
-  }
 }

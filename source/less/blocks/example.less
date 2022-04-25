@@ -23,9 +23,8 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    height: 641px;
+    justify-content: space-between;
     padding-bottom: 65px;
   }
 }
@@ -91,33 +90,29 @@
   justify-content: center;
 
   @media (min-width: @tablet-width) {
-    width: 366px;
+    justify-content: start;
   }
 }
 
 .example__list {
   margin: 0 0 34px;
   width: 124px;
-  padding: 15px 18px 3px;
+  padding: 0 18px;
   text-align: center;
   border: 1px solid @special-grey-light;
   border-radius: 3px;
 
   &:nth-child(1) {
-    margin-right: 16px;
-  }
-
-  &:nth-child(2) {
-    margin-left: 16px;
+    margin-right: 32px;
   }
 
   @media (min-width: @tablet-width) {
     margin: 0;
     width: 162px;
-    padding: 15px 24px 0;
+    padding: 0 24px;
 
     &:nth-child(2) {
-      padding: 15px 10px 0;
+      padding: 0 10px;
     }
   }
 
@@ -128,32 +123,33 @@
 
 .example__item {
   padding: 0 2px;
-  margin: 0 auto -20px;
+  margin: 0 auto;
   background-color: @light-grey;
+  transform: translateY(14px);
 
   @media (min-width: @tablet-width) {
-    margin-bottom: -7px;
     background-color: @color-main-light;
   }
 }
 
 .example__number {
-  margin-bottom: 8px;
+  margin: 0;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
   color: @color-base;
   text-transform: uppercase;
 
+
   @media (min-width: @tablet-width) {
-    margin-bottom: 11px;
+    margin: 0;
     font-size: 30px;
     line-height: 37px;
   }
 }
 
 .example__desc {
-  margin: 0;
+  margin: 7px 0 0;
   font-family: @font-arial;
   font-size: 12px;
   line-height: 100%;
@@ -161,6 +157,7 @@
   color: @color-base;
 
   @media (min-width: @tablet-width) {
+    margin: 13px 0 10px;
     font-size: 14px;
     line-height: 14px;
   }
@@ -179,10 +176,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 49px;
     margin: 0;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 24px;
     text-align: right;
   }
 
@@ -190,16 +186,7 @@
     display: block;
     width: 327px;
     text-align: left;
-    height: auto;
-  }
-}
-
-.example__block {
-  margin-left: auto;
-  margin-top: 0;
-
-  @media (min-width: @desktop-width) {
-    width: 592px;
+    line-height: 20px;
   }
 }
 
@@ -207,6 +194,7 @@
   display: flex;
 
   @media (min-width: @desktop-width) {
+    width: 592px;
     height: 511px;
     margin-bottom: 25px;
   }

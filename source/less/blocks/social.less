@@ -13,15 +13,16 @@
   }
 }
 
-.social__icon {
-  fill: @special-grey2;
-
-  &:hover {
+.social__link {
+  &:hover .social__icon {
     fill: @basic-green;
   }
 
-  &:active {
-    fill: @basic-green;
+  &:active .social__icon {
     opacity: 30%;
   }
+}
+
+.social__icon {
+  fill: @special-grey2;
 }
