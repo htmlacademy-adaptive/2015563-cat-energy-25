@@ -1,5 +1,28 @@
 .social__list {
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 132px;
+  margin: 20px auto;
   padding: 0;
   list-style-type: none;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 4px auto 8px;
+  }
+}
+
+.social__link {
+  &:hover .social__icon {
+    fill: @basic-green;
+  }
+
+  &:active .social__icon {
+    opacity: 30%;
+  }
+}
+
+.social__icon {
+  fill: @special-grey2;
 }

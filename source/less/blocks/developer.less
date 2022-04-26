@@ -2,6 +2,19 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+
+  &:hover .developer__title {
+    opacity: 30%;
+  }
+
+  &:hover .developer__icon {
+    fill: @basic-green;
+  }
+
+  &:active {
+    fill: @basic-green;
+    opacity: 30%;
+  }
 }
 
 .developer__title {
@@ -10,4 +23,13 @@
   line-height: 18px;
   font-weight: 400;
   color: @color-base;
+  align-items: center;
+}
+
+.developer__icon {
+  fill: @special-grey2;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 22px;
+  }
 }

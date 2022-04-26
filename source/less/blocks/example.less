@@ -15,19 +15,22 @@
 }
 
 .example__wrapper {
-  padding: 25px 0 40px;
+  padding: 25px 0 26px;
 
   @media (min-width: @tablet-width) {
     padding: 0 0 56px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 43px 0 65px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 65px;
   }
 }
 
 .example__title {
-  margin: 0 0 40px;
+  margin: 43px 0 40px;
   padding: 0;
   font-size: 36px;
   line-height: 40px;
@@ -40,7 +43,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 76px;
+    width: 436px;
+    margin-bottom: 146px;
   }
 }
 
@@ -60,23 +64,70 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 70px;
     margin-bottom: 69px;
     width: 436px;
   }
 }
 
+.example__inner {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 85px;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin: 0;
+  }
+}
+
 .example__list {
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 34px;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    justify-content: start;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 60px;
+  }
+}
+
+.example__item {
+  width: 124px;
+  height: 56px;
+  padding: 0 16px;
+  text-align: center;
+  border: 1px solid @special-grey-light;
+  border-radius: 3px;
+
+  &:nth-child(1) {
+    margin-right: 32px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    height: 77px;
+  }
 }
 
 .example__number {
-  margin-bottom: 8px;
+  margin: 15px 0 0;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
   color: @color-base;
   text-transform: uppercase;
+
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -85,20 +136,26 @@
 }
 
 .example__desc {
+  margin: 7px 0 0;
+  padding: 0 14px;
   font-family: @font-arial;
   font-size: 12px;
   line-height: 100%;
   font-weight: 400;
   color: @color-base;
+  background-color: @light-grey;
 
   @media (min-width: @tablet-width) {
+    margin: 13px 0 10px;
+    padding: 0;
     font-size: 14px;
     line-height: 14px;
+    background-color: @color-main-light;
   }
 }
 
 .example__text {
-  margin: 0 0 40px;
+  margin: 0 46px 40px;
   padding: 0;
   font-size: 14px;
   line-height: 20px;
@@ -107,26 +164,150 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 267px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
     font-size: 20px;
+    line-height: 24px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 327px;
+    text-align: left;
     line-height: 20px;
+  }
+}
+
+.example__image-block {
+  display: flex;
+
+  @media (min-width: @desktop-width) {
+    width: 592px;
+    height: 511px;
+    margin-bottom: 25px;
+  }
+}
+
+.example__image--before {
+  width: 280px;
+  height: 232px;
+  background-image: url("../img/cat-before.png");
+  background-repeat: no-repeat;
+}
+
+.example__range-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0;
+    padding: 0 71px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
   }
 }
 
 .example__range {
   font-family: @font-oswald;
+  margin: 0 13px;
   padding: 7px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-align: center;
-  text-transform: uppercase;
   border: none;
   background-color: @light-grey;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 16%);
+  }
+
+  &:active {
+    border-bottom: 1px solid transparent;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin: 0;
+    padding: 7px 0;
     background-color: @color-main-light;
+    border-bottom: 1px dotted rgba(0, 0, 0, 16%);
+  }
+}
+
+.example__range-scale {
+  position: relative;
+  width: 83px;
+  height: 14px;
+  padding: 3px 5px;
+  border: 1px solid @special-grey-light;
+  border-radius: 6px;
+  background-color: @color-main-light;
+
+  @media (min-width: @tablet-width) {
+    width: 426px;
+    height: 6px;
+    margin: 0 24px;
+    border: none;
+    border-radius: 6px;
+    background-color: @special-grey-scale;
+  }
+}
+
+.example__range-input {
+  display: none;
+}
+
+.example__range-bar {
+  width: 50%;
+  height: 6px;
+  border-radius: 6px;
+  background-color: @basic-green;
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 19%);
+  }
+
+  &:active {
+    border: 1px solid @basic-green;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 20%);
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: -14px;
+    left: 46.7%;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: @color-main-light;
+    border: 1px solid @special-grey-light;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 16%);
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      margin: auto;
+      border-radius: 50%;
+      background-color: @basic-green;
+    }
   }
 }
