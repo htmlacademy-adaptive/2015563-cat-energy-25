@@ -254,52 +254,43 @@
           <ul class="add-catalog__list">
             <li class="add-catalog__item">
               <p class="add-catalog__item-title">Сахарозаменитель</p>
-              <table class="add-catalog__content">
-                <tr>
-                  <td class="add-catalog__option">1 упаковка (100 г)</td>
-                  <td class="add-catalog__value">200 Р.</td>
-                </tr>
-              </table>
-              <a class="button add-catalog__order-btn" href="">Заказать</a>
+              <div class="add-catalog__content">
+                <p class="add-catalog__option">1 упаковка (100 г)</p>
+                <p class="add-catalog__value">200 Р.</p>
+              </div>
+              <button class="button add-catalog__order-btn button--long" type="button">Заказать</a>
             </li>
             <li class="add-catalog__item">
               <p class="add-catalog__item-title">Питьевая вода</p>
-              <table class="add-catalog__content">
-                <tr>
-                  <td class="add-catalog__option">5 литров</td>
-                  <td class="add-catalog__value">50 Р.</td>
-                </tr>
-              </table>
-              <a class="button add-catalog__order-btn" href="">Заказать</a>
+              <div class="add-catalog__content">
+                <p class="add-catalog__option">5 литров</p>
+                <p class="add-catalog__value">50 Р.</p>
+              </div>
+              <a class="button add-catalog__order-btn" href="#">Заказать</a>
             </li>
             <li class="add-catalog__item">
               <p class="add-catalog__item-title">Молоко</p>
-              <table class="add-catalog__content">
-                <tr>
-                  <td class="add-catalog__option">1 литр</td>
-                  <td class="add-catalog__value">100 Р.</td>
-                </tr>
-              </table>
+              <div class="add-catalog__content">
+                <p class="add-catalog__option">1 литр</p>
+                <p class="add-catalog__value">100 Р.</p>
+              </div>
               <a class="button add-catalog__order-btn" href="">Заказать</a>
             </li>
             <li class="add-catalog__item">
               <p class="add-catalog__item-title">Витамины</p>
-              <table class="add-catalog__content">
-                <tr>
-                  <td class="add-catalog__option">1 упаковка (30 г)</td>
-                  <td class="add-catalog__value">300 Р.</td>
-                </tr>
-              </table>
+              <div class="add-catalog__content">
+                <p class="add-catalog__option">1 упаковка (30 г)</p>
+                <p class="add-catalog__value">300 Р.</p>
+              </div>
               <a class="button add-catalog__order-btn" href="">Заказать</a>
             </li>
           </ul>
-        </div>
-      </section>
-
-      <section class="gift">
-        <div class="gift__wrapper">
-          <h2 class="visually-hidden">Подарок для вас!</h2>
-          <p class="gift__text">Закажите все<br>и получите чехол для кота в подарок!</p>
+          <div class="add-catalog__gift-box">
+            <h2 class="visually-hidden">Подарок для вас!</h2>
+            <div class="add-catalog__gift">
+              <p class="add-catalog__gift-text">Закажите все<br>и получите чехол для кота в подарок!</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -319,9 +310,11 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <h2 class="visually-hidden">Давайте дружить!</h2>
-        <a class="logo">
-          <img class="logo__title" src="img/logo-title.svg" width="128" high="24" alt="Вернуться на главную страницу.">
-        </a>
+        <div class="main-footer__logo logo">
+          <a class="logo">
+            <img class="logo__title" src="img/logo-title.svg" width="128" high="24" alt="Вернуться на главную страницу.">
+          </a>
+        </div>
         <div class="main-footer__social social">
           <ul class="social__list">
             <li class="social__item">
@@ -352,10 +345,12 @@
         </div>
         <div class="main-footer__developer developer">
           <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="developer__title">HTML Academy</span>
+          </a>
+          <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="developer__icon" aria-hidden="true" focusable="false" width="27" height="34" viewBox="0 0 27 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.643.016 13.5 0 0 1.407v24.606L13.5 34 27 26.013V1.407L13.643.016Zm11.591 25L13.5 31.956 1.766 25.015V14.93l11.685 6.916.02 1.253-8.017-4.743-.011 1.225 8.046 4.809.02 1.286-8.045-4.758-.01 1.226L13.5 26.95l8.124-4.833V16.91l3.62-2.15-.01 10.256Zm0-11.564-3.22 1.88-1.482.875-7.065-4.187-.011 1.225 6.04 3.573-.053.031-.13.076-.86.492-4.986-2.948-.011 1.225 3.936 2.328-.933.61-.021.012-2.971-1.742-.011 1.225 1.947 1.135-1.988 1.186-11.618-6.872 11.638-6.958 11.8 6.834Zm0-1.225L13.44 5.31 1.766 12.22V2.99L13.5 1.764 25.234 2.99v9.237Z"/>
             </svg>
-            <span class="developer__title">HTML Academy</span>
           </a>
         </div>
       </div>
