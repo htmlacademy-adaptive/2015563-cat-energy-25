@@ -17,23 +17,21 @@
           <img class="logo__title-image" src="img/logo-title.svg" width="101" high="18" alt="Магазин Кэт энерджи.">
         </a>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__link">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link">Подбор программы</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -47,45 +45,59 @@
 
       <form class="survey-form" action="http://echo.htmlacademy.ru/" metod="post">
         <h2 class="visually-hidden">Персональная информация</h2>
-        <div class="survey-form__set">
-          <label class="survey-form__label" for="cat-name">Имя:*</label>
-          <input class="survey-form__input" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
-          <label class="survey-form__label" for="body-mass">Вес:*</label>
-          <input class="survey-form__input" type="number" id="body-mass" name="body-mass" placeholder="7" required>
-          <label class="survey-form__label" for="age-years">Возраст (лет):</label>
-          <input class="survey-form__input" type="number" id="age-years" name="age-years" placeholder="7">
+        <div class="survey-form__wrapper-set">
+          <div class="survey-form__set">
+            <div class="survey-form__set-block">
+              <label class="survey-form__label" for="cat-name">Имя:*</label>
+              <input class="survey-form__input" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
+            </div>
+            <div class="survey-form__set-block">
+              <label class="survey-form__label" for="body-mass">Вес (кг):*</label>
+              <input class="survey-form__input" type="number" id="body-mass" name="body-mass" placeholder="7" required>
+            </div>
+            <div class="survey-form__set-block">
+              <label class="survey-form__label" for="age-years">Возраст (лет):</label>
+              <input class="survey-form__input" type="number" id="age-years" name="age-years" placeholder="7">
+            </div>
+          </div>
+          <div class="survey-form__set">
+            <ul class="survey-form__list survey-form__list--radio">
+              <li class="survey-form__item">
+                <label class="survey-form__label survey-form__label--radio">
+                  <input class="visually-hidden survey-form__input" type="radio" name="program-group" value="slim" checked>
+                  <span class="survey-form__mark"></span>
+                  <span class="survey-form__tag">Похудение</span>
+                </label>
+              </li>
+              <li class="survey-form__item">
+                <label class="survey-form__label survey-form__label--radio">
+                  <input class="visually-hidden survey-form__input" type="radio" name="program-group" value="pro">
+                  <span class="survey-form__mark"></span>
+                  <span class="survey-form__tag">Набор массы</span>
+                </label>
+              </li>
+              <li class="survey-form__item">
+                <label class="survey-form__label survey-form__label--radio">
+                  <input class="visually-hidden survey-form__input" type="radio" name="program-group" value="advise">
+                  <span class="survey-form__mark"></span>
+                  <span class="survey-form__tag">Не знаю (нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="survey-form__set">
-          <ul class="survey-form__list">
-            <li class="survey-form__item">
-              <label class="survey-form__label">
-                <input class="visually-hidden survey-form__input" type="radio" name="program-group" value="slim" checked>
-                <span class="survey-form__mark"></span>
-                <span class="survey-form__tag">Похудение</span>
-              </label>
-            </li>
-            <li class="survey-form__item">
-              <label class="survey-form__label">
-                <input class="visually-hidden survey-form__input" type="radio" name="program-group" value="pro">
-                <span class="survey-form__mark"></span>
-                <span class="survey-form__tag">Набор массы</span>
-              </label>
-            </li>
-            <li class="survey-form__item">
-              <label class="survey-form__label">
-                <input class="visually-hidden survey-form__input" type="radio" name="program-group" value="advise">
-                <span class="survey-form__mark"></span>
-                <span class="survey-form__tag">Не знаю (нужен ваш совет)</span>
-              </label>
-            </li>
-          </ul>
-        </div>
-        <div class="survey-form__set">
+        <div class="survey-form__set survey-form__set--contact">
           <p class="survey-form__title">Контактные данные (владельца кота)</p>
-          <label class="survey-form__label" for="contact-email">E-mail:*</label>
-          <input class="survey-form__input" type="email" id="contact-email" name="contact-email" placeholder="KUKLACHEV@GMAIL.COM" required>
-          <label class="survey-form__label" for="contact-phone">Телефон:*</label>
-          <input class="survey-form__input" type="tel" id="contact-phone" name="contact-phone" placeholder="8(960)900-60-90" required>
+          <div class="survey-form__inner-contact">
+            <div class="survey-form__set-block">
+              <label class="survey-form__label" for="contact-email">E-mail:*</label>
+              <input class="survey-form__input survey-form__input--email" type="email" id="contact-email" name="contact-email" placeholder="KUKLACHEV@GMAIL.COM" required>
+            </div>
+            <div class="survey-form__set-block">
+              <label class="survey-form__label" for="contact-phone">Телефон:*</label>
+              <input class="survey-form__input survey-form__input--phone" type="tel" id="contact-phone" name="contact-phone" placeholder="8(960)900-60-90" required>
+            </div>
+          </div>
         </div>
         <div class="survey-form__set">
           <p class="survey-form__title">Комментарий</p>
@@ -94,30 +106,30 @@
         </div>
         <div class="survey-form__set">
           <p class="survey-form__title">Дополнительно</p>
-          <ul class="survey-form__list">
+          <ul class="survey-form__list survey-form__list--checkbox">
             <li class="survey-form__item">
-              <label class="survey-form__label">
+              <label class="survey-form__label survey-form__label--checkbox">
                 <input class="visually-hidden survey-form__input" type="checkbox" name="sweetener" checked>
                 <span class="survey-form__mark"></span>
-                <span class="survey-form__tag survey-form__tag--black">Сахарозаменитель</span>
+                <span class="survey-form__tag survey-form__tag--checkbox">Сахарозаменитель</span>
               </label>
             </li>
             <li class="survey-form__item">
-              <label class="survey-form__label">
+              <label class="survey-form__label survey-form__label--checkbox">
                 <input class="visually-hidden survey-form__input" type="checkbox" name="drinking-water">
                 <span class="survey-form__mark"></span>
-                <span class="survey-form__tag survey-form__tag--black">Питьевая вода</span>
-              </label>
-            </li>
-            <li class="set-survey-form__item">
-              <label class="survey-form__label">
-                <input class="visually-hidden survey-form__input" type="checkbox" name="milk">
-                <span class="survey-form__mark"></span>
-                <span class="survey-form__tag survey-form__tag--black">Молоко</span>
+                <span class="survey-form__tag survey-form__tag--checkbox">Питьевая вода</span>
               </label>
             </li>
             <li class="survey-form__item">
-              <label class="survey-form__label">
+              <label class="survey-form__label survey-form__label--checkbox">
+                <input class="visually-hidden survey-form__input" type="checkbox" name="milk">
+                <span class="survey-form__mark"></span>
+                <span class="survey-form__tag survey-form__tag--checkbox">Молоко</span>
+              </label>
+            </li>
+            <li class="survey-form__item">
+              <label class="survey-form__label survey-form__label--checkbox">
                 <input class="visually-hidden survey-form__input" type="checkbox" name="vitamins">
                 <span class="survey-form__mark"></span>
                 <span class="survey-form__tag survey-form__tag--black">Витамины</span>

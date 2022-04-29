@@ -99,7 +99,7 @@
   text-decoration: none;
   text-transform: uppercase;
   background-color: @color-main-light;
-  border-top: 1px solid @light-base;
+  border-bottom: 1px solid @light-base;
 
   &:hover {
     opacity: 60%;
@@ -110,24 +110,26 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    border-top: none;
+    border-bottom: none;
   }
 }
 
 .main-nav__item {
   text-align: center;
 
-  &--active {
-    position: relative;
+  @media (min-width: @tablet-width) {
+    &--active {
+      position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: -10px;
-      left: 0;
-      height: 2px;
-      background: @basic-green;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        height: 2px;
+        background: @basic-green;
+      }
     }
   }
 }
