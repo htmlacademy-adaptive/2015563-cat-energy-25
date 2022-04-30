@@ -1,8 +1,12 @@
 .catalog {
-  padding: @padding-main;
+  padding-left: 20px;
+  border-top: 1px solid @light-grey2;
+  border-bottom: 1px solid @light-grey2;
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
+    border-top: none;
+    border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -15,12 +19,14 @@
 .catalog__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, 280px);
+  gap: 0 30px;
+  margin: 0;
   padding: 0;
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
-    gap: 60px;
     grid-template-columns: repeat(auto-fit, 324px,);
+    gap: 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -30,7 +36,7 @@
 }
 
 .catalog__item {
-  padding: 11px 0 14px;
+  padding: 19px 0 25px;
 
   @media (min-width: @tablet-width) {
     padding: 8px 36px 39px;
@@ -39,18 +45,19 @@
 
 .catalog__item-inner {
   display: flex;
-  padding: 11px 0 14px;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
     flex-grow: 1;
+    margin-bottom: 33px;
   }
 }
 
 .catalog__image-link {
   display: block;
-  width: 112px;
-  height: 140px;
+  width: 50%;
+  height: 112px;
 
   @media (min-width: @tablet-width) {
     width: 168px;
@@ -63,12 +70,21 @@
   }
 }
 
+.catalog__box {
+  width: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+}
+
 .catalog__title-link {
+  display: block;
   text-decoration-line: none;
 }
 
 .catalog__title {
-  margin: 0;
+  margin: 0 0 18px;
   width: 80px;
   font-size: 16px;
   line-height: 20px;
@@ -78,21 +94,26 @@
 
   @media (min-width: @tablet-width) {
     width: 145px;
+    margin: 34px auto 21px;
     font-size: 20px;
     line-height: 24px;
+    text-align: center;
   }
 
   @media (min-width: @desktop-width) {
+    margin: 46px auto 22px;
     line-height: 21px;
   }
 }
 
 .catalog__content {
+  width: 100%;
   font-family: @font-arial;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
   color: @color-base;
+  border-collapse: collapse;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
@@ -100,21 +121,27 @@
 }
 
 .catalog__option {
-  padding: 0;
+  @media (min-width: @tablet-width) {
+    padding: 7px 0;
+    border-bottom: 1px solid @special-grey-light;
+  }
 }
 
 .catalog__value {
   padding: 0;
+  text-align: end;
+
+  @media (min-width: @tablet-width) {
+    padding: 7px 0;
+    border-bottom: 1px solid @special-grey-light;
+  }
 }
 
 .catalog__order-btn {
   display: block;
+  width: 280px;
 
   @media (min-width: @tablet-width) {
-    width: 248px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 168px;
+    width: 100%;
   }
 }
