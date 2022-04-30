@@ -96,8 +96,6 @@
 }
 
 .add-catalog__content {
-  display: flex;
-  justify-content: space-between;
   width: 280px;
   margin-bottom: 15px;
   font-family: @font-arial;
@@ -107,9 +105,7 @@
   color: @color-base;
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 270px 92px;
-    width: auto;
+    width: 288px;
     margin-bottom: 25px;
     font-size: 16px;
     line-height: 20px;
@@ -117,7 +113,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 244px 82px;
     text-align: start;
     margin-bottom: 0;
   }
@@ -131,20 +126,20 @@
   margin: 0;
   text-align: end;
 
-  @media (min-width: @desktop-width) {
-    text-align: start;
+  @media (min-width: @tablet-width) {
+    width: 93px;
   }
 }
 
 .add-catalog__order-btn {
-  min-width: 280px;
+  width: 280px;
 
   @media (min-width: @tablet-width) {
-    min-width: 632px;
+    width: 632px;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 244px;
+    width: 244px;
   }
 }
 
