@@ -21,7 +21,7 @@
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list">
+        <ul class="main-nav__list main-nav__list--light">
           <li class="main-nav__item main-nav__item--active">
             <a class="main-nav__link">Главная</a>
           </li>
@@ -40,6 +40,14 @@
         <div class="header__wrapper">
           <h1 class="header__title">Функциональное питание для котов</h1>
           <p class="header__text">Занялся собой? Займись котом!</p>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
+            <img class="header__image" src="img/index-can-mobile.png" width="280" height="270" srcset="img/index-can-mobile@2x.png 2x" alt="Образец Кэт энерджи курица.">
+          </picture>
+          <div class="header__background-image">
+            <div class="header__background-color"></div>
+          </div>
         </div>
         <div class="header__link-wrapper">
           <a class="header__link" href="form.html">Подобрать программу</a>
@@ -86,7 +94,7 @@
         <div class="advantages__wrapper">
           <h2 class="advantages__title">Как это работает</h2>
           <ul class="advantages__list">
-            <li class="advantages__item advantages__item--health">
+            <li class="advantages__item advantages__item">
               <span class="advantages__number">1</span>
               <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
             </li>

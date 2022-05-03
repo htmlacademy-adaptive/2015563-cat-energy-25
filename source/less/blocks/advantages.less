@@ -49,7 +49,6 @@
   font-weight: 400;
   align-items: center;
   text-align: left;
-  background-repeat: no-repeat;
 
   &::before {
     content: "";
@@ -59,21 +58,26 @@
     left: 0;
     width: 60px;
     height: 60px;
-  }
-
-  &--health {
+    background-color: @basic-green;
     background-image: url("../img/health.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
-  &--ready {
+  &--ready::before {
     background-image: url("../img/ready.svg");
   }
 
-  &--nutrition {
+  &--nutrition::before {
     background-image: url("../img/nutrition.svg");
   }
 
-  &--effect {
+  &--effect::before {
     background-image: url("../img/effect.svg");
   }
 

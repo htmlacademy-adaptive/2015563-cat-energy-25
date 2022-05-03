@@ -183,6 +183,7 @@
 
 .example__image-block {
   display: flex;
+  justify-content: center;
 
   @media (min-width: @desktop-width) {
     width: 592px;
@@ -194,8 +195,49 @@
 .example__image--before {
   width: 280px;
   height: 232px;
-  background-image: url("../img/cat-before.png");
+  background-image: url("../img/before-mobile.png");
   background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/before-mobile@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 296px;
+    height: 511px;
+    margin-left: auto;
+    background-image: url("../img/cat-fat.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat-fat@2x.png");
+    }
+  }
+}
+
+.example__image--after {
+  display: none;
+  width: 243px;
+  height: 232px;
+  background-image: url("../img/after-mobile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/after-mobile@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 296px;
+    height: 511px;
+    margin-right: auto;
+    background-image: url("../img/cat-skinny.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat-skinny@2x.png");
+    }
+  }
 }
 
 .example__range-block {
