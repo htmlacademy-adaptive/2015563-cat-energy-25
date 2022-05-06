@@ -8,8 +8,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
-    padding: 0 0;
+    width: 1440px;
+    padding: 0 110px;
     margin: 0 auto 26px;
   }
 }
@@ -49,7 +49,6 @@
   font-weight: 400;
   align-items: center;
   text-align: left;
-  background-repeat: no-repeat;
 
   &::before {
     content: "";
@@ -59,22 +58,27 @@
     left: 0;
     width: 60px;
     height: 60px;
+    background-color: @basic-green;
+    background-image: url("../img/index/health.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
-  &--health {
-    background-image: url("../img/health.svg");
+  &--ready::before {
+    background-image: url("../img/index/ready.svg");
   }
 
-  &--ready {
-    background-image: url("../img/ready.svg");
+  &--nutrition::before {
+    background-image: url("../img/index/nutrition.svg");
   }
 
-  &--nutrition {
-    background-image: url("../img/nutrition.svg");
-  }
-
-  &--effect {
-    background-image: url("../img/effect.svg");
+  &--effect::before {
+    background-image: url("../img/index/effect.svg");
   }
 
   @media (min-width: @tablet-width) {

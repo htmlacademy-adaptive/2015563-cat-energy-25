@@ -12,6 +12,16 @@
   width: 33px;
   height: 38px;
   margin-right: 56px;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 202px;
+    height: 59px;
+  }
 }
 
 .logo__title {
@@ -21,6 +31,12 @@
 
   &:active .logo__title-image {
     opacity: 60%;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--header {
+      display: none;
+    }
   }
 }
 

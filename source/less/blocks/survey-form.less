@@ -1,13 +1,6 @@
 .survey-form {
-  padding: @padding-main;
-
-  @media (min-width: @tablet-width) {
-    padding: 0 30px;
-  }
-
   @media (min-width: @desktop-width) {
-    width: 1220px;
-    padding: 0 0;
+    width: 1440px;
     margin: 0 auto;
   }
 }
@@ -17,6 +10,7 @@
     display: grid;
     grid-template-columns: 568px 568px;
     gap: 0 80px;
+    margin: 0 110px;
   }
 }
 
@@ -27,7 +21,7 @@
   padding: 19px 0 4px;
 
   @media (min-width: @tablet-width) {
-    padding: 65px 40px 0;
+    padding: 65px 0 0;
 
     &--contact {
       margin-bottom: 6px;
@@ -44,42 +38,68 @@
   }
 }
 
+.survey-form__set-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
 .survey-form__inner-contact {
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 570px 570px;
     gap: 80px;
-    margin-top: 9px;
+    margin: 76px 110px 9px;
   }
 }
 
 .survey-form__list {
   margin: 0;
-  padding: 25px 0 19px;
+  padding: 25px 0;
   list-style-type: none;
+  border-top: 1px solid @light-grey3;
+  border-bottom: 1px solid @light-grey3;
+
+  &--checkbox {
+    border-bottom: none;
+    border-top: none;
+  }
 
   @media (min-width: @tablet-width) {
-    padding: 25px 28px 29px;
+    padding: 25px 0 29px;
 
     &--radio {
       border: 1px solid @light-grey3;
-      margin-bottom: 6px;
+      margin: 0 70px 6px;
     }
 
     &--checkbox {
       display: grid;
-      grid-template-columns: 50% 50%;
-      gap: 20px 60px;
-      margin-right: 63px;
+      grid-template-columns: 330px 330px;
+      gap: 20px 10px;
       padding: 0;
     }
   }
 
   @media (min-width: @desktop-width) {
+    &--radio {
+      margin: 0;
+    }
+
     &--checkbox {
       display: grid;
       grid-template-columns: 221px 221px 221px 221px;
       gap: 0 104px;
+      margin: 62px 110px 0;
     }
   }
 }
@@ -90,12 +110,6 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
   }
-}
-
-.survey-form__set-block {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
 }
 
 .survey-form__label {
@@ -113,15 +127,33 @@
     line-height: 30px;
   }
 
-  &--radio,
-  &--checkbox {
+  &--radio {
     position: relative;
     display: block;
+    margin: 0 20px;
     padding-left: 45px;
     cursor: pointer;
 
     @media (min-width: @tablet-width) {
       padding-left: 60px;
+      margin: 0 28px;
+    }
+  }
+
+  &--checkbox {
+    position: relative;
+    display: block;
+    margin: 0 20px;
+    padding-left: 45px;
+    cursor: pointer;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 70px;
+      padding-left: 60px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0;
     }
   }
 }
@@ -179,7 +211,7 @@
 }
 
 .survey-form__input[type="radio"]:checked + .survey-form__mark {
-  background-image: url("../img/ellipse.svg");
+  background-image: url("../img/form/ellipse.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -189,7 +221,7 @@
 }
 
 .survey-form__input[type="checkbox"]:checked + .survey-form__mark {
-  background-image: url("../img/check.svg");
+  background-image: url("../img/form/check.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -214,22 +246,46 @@
   }
 }
 
+.survey-form__title-wrapper {
+  position: relative;
+}
+
 .survey-form__title {
+  display: inline-block;
+  max-width: 1440px;
   margin: 0 0 26px;
+  padding: 0 22px;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
   color: @color-main;
+  background-color: @color-main-light;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: @basic-green;
+    z-index: -1;
+  }
 
   @media (min-width: @tablet-width) {
-    margin: 0 0 57px;
+    margin: 0 30px 57px;
+    padding: 0 40px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 70px;
   }
 }
 
 .survey-form__textarea {
-  margin: 0 0 22px;
+  margin: 0 20px 4px;
   padding: 10px;
   font-family: @font-oswald;
   font-size: 16px;
@@ -240,6 +296,7 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    margin: 0 70px;
     padding: 10px 19px;
     font-size: 20px;
     line-height: 30px;
@@ -247,7 +304,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 9px 0 22px;
+    margin: 76px 110px 22px;
   }
 }
 
@@ -258,12 +315,12 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    margin: 29px 40px 72px;
+    margin: 29px 70px 72px;
     align-items: center;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 36px 0 80px;
+    margin: 36px 110px 80px;
     padding: 0;
   }
 }
