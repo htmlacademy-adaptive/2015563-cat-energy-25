@@ -1,10 +1,10 @@
 .advantages {
   padding: @padding-main;
-  margin-bottom: 49px;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
-    margin-bottom: 90px;
+    margin-bottom: 52px;
   }
 
   @media (min-width: @desktop-width) {
@@ -33,8 +33,16 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: 40px 0 0;
+  padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 40px 0 0;
+  }
 }
 
 .advantages__item {
@@ -82,18 +90,19 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 354px;
-    margin-bottom: 37px;
+    width: 249px;
+    margin: 40px 75px 37px 0;
     padding: 111px 0 0;
     font-size: 16px;
     line-height: 24px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 250px;
+    width: 245px;
+    margin: 0;
 
     &:not(:last-child) {
-      margin-right: 64px;
+      margin-right: 80px;
     }
   }
 }

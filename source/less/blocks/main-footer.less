@@ -16,29 +16,34 @@
 .main-footer__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 39px 0 22px;
+  padding: 39px 0 20px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 56px 0 55px;
+    padding: 58px 0 55px;
     align-items: center;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 57px 0 58px;
+    padding: 57px 0 55px;
   }
 }
 
 .main-footer__logo-wrapper {
-  padding-bottom: 32px;
+  padding-bottom: 30px;
   align-items: center;
   border-bottom: 1px solid @special-grey-dark;
 
   @media (min-width: @tablet-width) {
+    margin-right: 23px;
     padding-bottom: 0;
     border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 28px;
   }
 }
 
