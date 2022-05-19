@@ -132,6 +132,7 @@
 }
 
 .survey-form__label {
+  position: relative;
   flex-shrink: 0;
   margin-right: 15px;
   font-size: 16px;
@@ -140,6 +141,11 @@
   align-items: center;
   color: @color-base;
   text-transform: uppercase;
+
+  &--contact {
+    display: flex;
+    width: 100%;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -153,6 +159,10 @@
     padding-left: 45px;
     cursor: pointer;
 
+    &:active {
+      opacity: 30%;
+    }
+
     @media (min-width: @tablet-width) {
       padding-left: 60px;
       margin: 0 28px;
@@ -165,6 +175,10 @@
     margin: 0 20px;
     padding-left: 45px;
     cursor: pointer;
+
+    &:active {
+      opacity: 30%;
+    }
 
     @media (min-width: @tablet-width) {
       margin: 0 70px;
@@ -187,26 +201,69 @@
   align-items: center;
   color: @color-base;
   text-transform: uppercase;
-  border: 1px solid @light-grey3;
+  outline: 1px solid @light-grey3;
+  border: none;
   border-radius: none;
   cursor: pointer;
 
-  &--email {
-    background: url("../img/email-icon.svg");
-    background-repeat: no-repeat;
-    background-position: top 14px right 15px;
+  &:hover {
+    outline: 1px solid @special-grey-light;
+
+    &:hover ~ .survey-form__icon--email {
+      stroke: @special-grey;
+    }
+
+    &:hover ~ .survey-form__icon--phone {
+      fill: @special-grey;
+    }
   }
 
-  &--phone {
-    background: url("../img/phone-icon.svg");
-    background-repeat: no-repeat;
-    background-position: top 12px right 12px;
+  &:focus {
+    outline: 2px solid @color-base;
+
+    &:focus-within ~ .survey-form__icon--email {
+      stroke: @basic-green;
+    }
+
+    &:focus-within ~ .survey-form__icon--phone {
+      fill: @basic-green;
+    }
   }
 
   @media (min-width: @tablet-width) {
     padding: 10px 18px 10px;
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+input:invalid {
+  outline: 2px solid @error;
+
+  &:invalid ~ .survey-form__icon--email {
+    border: none;
+    fill: none;
+    stroke: @error;
+  }
+
+  &:invalid ~ .survey-form__icon--phone {
+    fill: @error;
+    stroke: none;
+  }
+}
+
+.survey-form__icon {
+  position: absolute;
+  right: 18px;
+
+  &--email {
+    fill: transparent;
+    stroke: @special-grey;
+  }
+
+  &:focus {
+    stroke: @basic-green;
+    outline: none;
   }
 }
 
@@ -227,6 +284,10 @@
 .survey-form__input[type="radio"] + .survey-form__mark {
   border: 1px solid @special-grey-light;
   border-radius: 50%;
+
+  &:hover {
+    border: 1px solid @special-grey-light2;
+  }
 }
 
 .survey-form__input[type="radio"]:checked + .survey-form__mark {
@@ -241,6 +302,10 @@
 
 .survey-form__input[type="checkbox"] + .survey-form__mark {
   border: 1px solid @special-grey-light;
+
+  &:hover {
+    border: 1px solid @special-grey-light2;
+  }
 }
 
 .survey-form__input[type="checkbox"]:checked + .survey-form__mark {

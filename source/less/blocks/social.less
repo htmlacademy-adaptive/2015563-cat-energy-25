@@ -16,16 +16,14 @@
   width: 28px;
 }
 
-.social__link {
-  &:hover .social__icon {
+.social__link .social__icon {
+  fill: @special-grey2;
+
+  &:hover {
     fill: @basic-green;
   }
 
-  &:active .social__icon {
+  &:active {
     opacity: 30%;
   }
-}
-
-.social__icon {
-  fill: @special-grey2;
 }
