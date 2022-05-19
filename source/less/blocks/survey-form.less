@@ -206,14 +206,26 @@
   border-radius: none;
   cursor: pointer;
 
+  &:invalid {
+    outline: 2px solid @error;
+
+    & ~ .survey-form__icon--email {
+      stroke: @error;
+    }
+
+    & ~ .survey-form__icon--phone {
+      fill: @error;
+    }
+  }
+
   &:hover {
     outline: 1px solid @special-grey-light;
 
-    &:hover ~ .survey-form__icon--email {
+    & ~ .survey-form__icon--email {
       stroke: @special-grey;
     }
 
-    &:hover ~ .survey-form__icon--phone {
+    & ~ .survey-form__icon--phone {
       fill: @special-grey;
     }
   }
@@ -221,11 +233,11 @@
   &:focus {
     outline: 2px solid @color-base;
 
-    &:focus-within ~ .survey-form__icon--email {
+    & ~ .survey-form__icon--email {
       stroke: @basic-green;
     }
 
-    &:focus-within ~ .survey-form__icon--phone {
+    & ~ .survey-form__icon--phone {
       fill: @basic-green;
     }
   }
@@ -237,21 +249,6 @@
   }
 }
 
-input:invalid {
-  outline: 2px solid @error;
-
-  &:invalid ~ .survey-form__icon--email {
-    border: none;
-    fill: none;
-    stroke: @error;
-  }
-
-  &:invalid ~ .survey-form__icon--phone {
-    fill: @error;
-    stroke: none;
-  }
-}
-
 .survey-form__icon {
   position: absolute;
   right: 18px;
@@ -259,11 +256,6 @@ input:invalid {
   &--email {
     fill: transparent;
     stroke: @special-grey;
-  }
-
-  &:focus {
-    stroke: @basic-green;
-    outline: none;
   }
 }
 
@@ -389,6 +381,7 @@ input:invalid {
   font-weight: 400;
   text-align: center;
   color: @color-base;
+  border: 1px solid @light-grey3;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
