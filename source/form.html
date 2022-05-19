@@ -61,11 +61,11 @@
             </div>
             <div class="survey-form__set-block">
               <label class="survey-form__label" for="body-mass">Вес (кг):*</label>
-              <input class="survey-form__input" type="number" id="body-mass" name="body-mass" placeholder="7" required>
+              <input class="survey-form__input" type="number" id="body-mass" name="body-mass" placeholder="7" pattern="[0-9]" required>
             </div>
             <div class="survey-form__set-block">
               <label class="survey-form__label" for="age-years">Возраст (лет):</label>
-              <input class="survey-form__input" type="number" id="age-years" name="age-years" placeholder="7">
+              <input class="survey-form__input" type="number" id="age-years" name="age-years" placeholder="7" pattern="[0-9]">
             </div>
           </div>
           <div class="survey-form__set survey-form__set--radio">
@@ -100,12 +100,22 @@
           </div>
           <div class="survey-form__inner-contact">
             <div class="survey-form__set-block">
-              <label class="survey-form__label" for="contact-email">E-mail:*</label>
-              <input class="survey-form__input survey-form__input--email" type="email" id="contact-email" name="contact-email" placeholder="KUKLACHEV@GMAIL.COM" required>
+              <label class="survey-form__label survey-form__label--contact">
+                E-mail:*
+                <input class="survey-form__input survey-form__input--contact" type="email" id="contact-email" name="contact-email" placeholder="KUKLACHEV@GMAIL.COM" required>
+                <svg class="survey-form__icon survey-form__icon--email" width="19" height="14">
+                  <use href="img/sprite.svg#email-icon"></use>
+                </svg>
+              </label>
             </div>
             <div class="survey-form__set-block">
-              <label class="survey-form__label" for="contact-phone">Телефон:*</label>
-              <input class="survey-form__input survey-form__input--phone" type="tel" id="contact-phone" name="contact-phone" placeholder="8 (960) 900-60-90" required>
+              <label class="survey-form__label survey-form__label--contact">
+                Телефон:*
+                <input class="survey-form__input survey-form__input--contact" type="tel" id="contact-phone" name="contact-phone" placeholder="8 (960) 900-60-90" required>
+                <svg class="survey-form__icon survey-form__icon--phone" width="20" height="21">
+                  <use href="img/sprite.svg#phone-icon"></use>
+                </svg>
+              </label>
             </div>
           </div>
         </div>
@@ -123,7 +133,7 @@
           <ul class="survey-form__list survey-form__list--checkbox">
             <li class="survey-form__item">
               <label class="survey-form__label survey-form__label--checkbox">
-                <input class="visually-hidden survey-form__input" type="checkbox" name="sweetener" checked>
+                <input class="visually-hidden survey-form__input survey-form__input--checkbox" type="checkbox" name="sweetener" checked>
                 <span class="survey-form__mark"></span>
                 <span class="survey-form__tag survey-form__tag--checkbox">Сахарозаменитель</span>
               </label>
@@ -185,7 +195,7 @@
             <li class="social__item">
               <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
                 <svg class="social__icon" width="27" height="17">
-                  <use href="../img/sprite.svg#icon-vk"></use>
+                  <use href="img/sprite.svg#vk"></use>
                 </svg>
                 <span class="visually-hidden">Мы В контактах</span>
               </a>
@@ -193,7 +203,7 @@
             <li class="social__item">
               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <svg class="social__icon" width="24" height="19">
-                  <use href="../img/sprite.svg#icon-youtube"></use>
+                  <use href="img/sprite.svg#youtube"></use>
                 </svg>
                 <span class="visually-hidden">Мы в Ютюбе</span>
               </a>
@@ -201,7 +211,7 @@
             <li class="social__item">
               <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
                 <svg class="social__icon" width="20" height="18">
-                  <use href="../img/sprite.svg#icon-telegram"></use>
+                  <use href="img/sprite.svg#telegram"></use>
                 </svg>
                 <span class="visually-hidden">Мы в Телеграм</span>
               </a>
@@ -214,7 +224,7 @@
           </a>
           <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="developer__icon" width="27" height="34">
-              <use href="../img/sprite.svg#icon-developer"></use>
+              <use href="img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>
         </div>
