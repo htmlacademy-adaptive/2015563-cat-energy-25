@@ -6,6 +6,8 @@
 }
 
 .survey-form__wrapper-set {
+  display: block;
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 568px 568px;
@@ -206,7 +208,7 @@
   border-radius: none;
   cursor: pointer;
 
-  &:invalid {
+  &--invalid {
     outline: 2px solid @error;
 
     & ~ .survey-form__icon--email {
@@ -326,13 +328,17 @@
   }
 }
 
-.survey-form__title-wrapper {
-  position: relative;
+.survey-form__title-wrapper-line {
+  width: 222px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
 }
 
 .survey-form__title {
+  position: relative;
   display: inline-block;
-  max-width: 1440px;
   margin: 0 0 35px;
   padding: 0 20px;
   font-size: 24px;
@@ -344,12 +350,25 @@
   &::before {
     content: "";
     position: absolute;
-    top: 16px;
-    left: 0;
+    top: 50%;
+    right: 0;
     height: 2px;
-    width: 100%;
+    width: 100vw;
     background-color: @basic-green;
     z-index: -1;
+  }
+
+  &--line {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 0;
+      height: 2px;
+      width: 100vw;
+      background-color: @basic-green;
+      z-index: -1;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -362,8 +381,8 @@
       margin: 0 30px 76px;
     }
 
-    &::before {
-      top: 23px;
+    &::after {
+      top: 50%;
     }
   }
 
