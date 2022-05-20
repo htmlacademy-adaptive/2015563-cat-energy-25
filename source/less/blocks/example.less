@@ -6,20 +6,6 @@
     position: relative;
     padding: 0 30px;
     background-color: transparent;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1440px;
-    padding: 0 110px;
-    margin: 0 auto;
-  }
-}
-
-.example__wrapper {
-  padding: 25px 0 40px;
-
-  @media (min-width: @tablet-width) {
-    padding: 0 0 58px;
 
     &::after {
       position: absolute;
@@ -38,10 +24,24 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
+}
+
+.example__wrapper {
+  padding: 25px 0 40px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 58px;
+  }
+
+  @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 1220px;
     padding-bottom: 70px;
+    margin: auto;
   }
 }
 

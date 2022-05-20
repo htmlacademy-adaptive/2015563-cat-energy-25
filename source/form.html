@@ -61,11 +61,11 @@
             </div>
             <div class="survey-form__set-block">
               <label class="survey-form__label" for="body-mass">Вес (кг):*</label>
-              <input class="survey-form__input" type="number" id="body-mass" name="body-mass" placeholder="7" pattern="[0-9]" required>
+              <input class="survey-form__input" type="number" minlength="1" id="body-mass" name="body-mass" placeholder="7" required>
             </div>
             <div class="survey-form__set-block">
               <label class="survey-form__label" for="age-years">Возраст (лет):</label>
-              <input class="survey-form__input" type="number" id="age-years" name="age-years" placeholder="7" pattern="[0-9]">
+              <input class="survey-form__input" type="number" id="age-years" name="age-years" placeholder="7">
             </div>
           </div>
           <div class="survey-form__set survey-form__set--radio">
@@ -95,8 +95,8 @@
           </div>
         </div>
         <div class="survey-form__set survey-form__set--contact">
-          <div class="survey-form__title-wrapper">
-            <p class="survey-form__title">Контактные данные (владельца кота)</p>
+          <div class="survey-form__title-wrapper survey-form__title-wrapper-line">
+            <p class="survey-form__title survey-form__title--line">Контактные данные (владельца кота)</p>
           </div>
           <div class="survey-form__inner-contact">
             <div class="survey-form__set-block">
@@ -111,7 +111,7 @@
             <div class="survey-form__set-block">
               <label class="survey-form__label survey-form__label--contact">
                 Телефон:*
-                <input class="survey-form__input survey-form__input--contact" type="tel" id="contact-phone" name="contact-phone" placeholder="8 (960) 900-60-90" required>
+                <input class="survey-form__input survey-form__input--contact" type="tel" minlength="9" maxlength="14" id="contact-phone" name="contact-phone" placeholder="8 (960) 900-60-90" required>
                 <svg class="survey-form__icon survey-form__icon--phone" width="20" height="21">
                   <use href="img/sprite.svg#phone-icon"></use>
                 </svg>
@@ -121,14 +121,14 @@
         </div>
         <div class="survey-form__set survey-form__set--comment">
           <div class="survey-form__title-wrapper">
-            <p class="survey-form__title survey-form__title--comment">Комментарий</p>
+            <p class="survey-form__title survey-form__title--line">Комментарий</p>
           </div>
           <label class="visually-hidden" for="comment">Напишите комментарий.</label>
           <textarea class="survey-form__textarea" id="comment" name="comment" rows="7" cols="40" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
         <div class="survey-form__set">
           <div class="survey-form__title-wrapper">
-            <p class="survey-form__title">Дополнительно</p>
+            <p class="survey-form__title survey-form__title--line">Дополнительно</p>
           </div>
           <ul class="survey-form__list survey-form__list--checkbox">
             <li class="survey-form__item">
