@@ -1,12 +1,10 @@
 .add-catalog {
   @media (min-width: @desktop-width) {
-    width: 1440px;
     margin: 0 auto;
   }
 }
 
 .add-catalog__header {
-  position: relative;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
@@ -19,9 +17,9 @@
 }
 
 .add-catalog__title {
+  position: relative;
   display: inline-block;
-  max-width: 1440px;
-  margin: 24px 0 36px;
+  margin: 25px 0 36px;
   padding: 0 20px;
   font-size: 24px;
   line-height: 24px;
@@ -31,12 +29,25 @@
   &::before {
     content: "";
     position: absolute;
-    top: 48%;
-    left: 0;
+    top: 50%;
+    right: 0;
     height: 2px;
-    width: 100%;
+    width: 100vw;
     background-color: @basic-green;
     z-index: -1;
+  }
+
+  &--line {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 0;
+      height: 2px;
+      width: 100vw;
+      background-color: @basic-green;
+      z-index: -1;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -44,14 +55,20 @@
     padding: 0 37px;
     font-size: 36px;
     line-height: 36px;
+
+    &::before,
+    &::after {
+      top: 60%;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin: 76px 0 80px;
     padding: 0 39px;
 
-    &::before {
-      top: 51%;
+    &::before,
+    &::after {
+      top: 65%;
     }
   }
 }
@@ -186,7 +203,7 @@
 }
 
 .add-catalog__gift-box {
-  margin: 35px 0;
+  margin: 34px 0;
   background-image: url("../img/catalog/background-gift-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -224,7 +241,7 @@
   opacity: 85%;
 
   @media (min-width: @tablet-width) {
-    background-position: top 57px left 77px;
+    background-position: top 59px left 79px;
   }
 
   @media (min-width: @desktop-width) {
