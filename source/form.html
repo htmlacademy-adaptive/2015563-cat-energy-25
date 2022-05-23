@@ -94,72 +94,72 @@
             </ul>
           </div>
         </div>
-        <div class="survey-form__set survey-form__set--contact">
+        <div class="survey-form__set survey-form__set--contact survey-form__set--line">
           <div class="survey-form__title-wrapper survey-form__title-wrapper-line">
             <p class="survey-form__title survey-form__title--line">Контактные данные (владельца кота)</p>
-          </div>
-          <div class="survey-form__inner-contact">
-            <div class="survey-form__set-block">
-              <label class="survey-form__label survey-form__label--contact">
-                E-mail:*
-                <input class="survey-form__input survey-form__input--contact" type="email" id="contact-email" name="contact-email" placeholder="KUKLACHEV@GMAIL.COM" required>
-                <svg class="survey-form__icon survey-form__icon--email" width="19" height="14">
-                  <use href="img/sprite.svg#email-icon"></use>
-                </svg>
-              </label>
-            </div>
-            <div class="survey-form__set-block">
-              <label class="survey-form__label survey-form__label--contact">
-                Телефон:*
-                <input class="survey-form__input survey-form__input--contact" type="tel" minlength="9" maxlength="14" id="contact-phone" name="contact-phone" placeholder="8 (960) 900-60-90" required>
-                <svg class="survey-form__icon survey-form__icon--phone" width="20" height="21">
-                  <use href="img/sprite.svg#phone-icon"></use>
-                </svg>
-              </label>
+            <div class="survey-form__inner-contact">
+              <div class="survey-form__set-block">
+                <label class="survey-form__label survey-form__label--contact">
+                  E-mail:*
+                  <input class="survey-form__input survey-form__input--contact" type="email" id="contact-email" name="contact-email" placeholder="KUKLACHEV@GMAIL.COM" required>
+                  <svg class="survey-form__icon survey-form__icon--email" width="19" height="14">
+                    <use href="img/sprite.svg#email-icon"></use>
+                  </svg>
+                </label>
+              </div>
+              <div class="survey-form__set-block">
+                <label class="survey-form__label survey-form__label--contact">
+                  Телефон:*
+                  <input class="survey-form__input survey-form__input--contact" type="tel" minlength="9" maxlength="14" id="contact-phone" name="contact-phone" placeholder="8 (960) 900-60-90" required>
+                  <svg class="survey-form__icon survey-form__icon--phone" width="20" height="21">
+                    <use href="img/sprite.svg#phone-icon"></use>
+                  </svg>
+                </label>
+              </div>
             </div>
           </div>
         </div>
-        <div class="survey-form__set survey-form__set--comment">
+        <div class="survey-form__set survey-form__set--comment survey-form__set--line">
           <div class="survey-form__title-wrapper">
-            <p class="survey-form__title survey-form__title--line">Комментарий</p>
+            <p class="survey-form__title">Комментарий</p>
+            <label class="visually-hidden" for="comment">Напишите комментарий.</label>
+            <textarea class="survey-form__textarea" id="comment" name="comment" rows="7" cols="40" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
-          <label class="visually-hidden" for="comment">Напишите комментарий.</label>
-          <textarea class="survey-form__textarea" id="comment" name="comment" rows="7" cols="40" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
-        <div class="survey-form__set">
+        <div class="survey-form__set survey-form__set--line">
           <div class="survey-form__title-wrapper">
-            <p class="survey-form__title survey-form__title--line">Дополнительно</p>
+            <p class="survey-form__title">Дополнительно</p>
+            <ul class="survey-form__list survey-form__list--checkbox">
+              <li class="survey-form__item survey-form__item--checkbox">
+                <label class="survey-form__label survey-form__label--checkbox">
+                  <input class="visually-hidden survey-form__input survey-form__input--checkbox" type="checkbox" name="sweetener" checked>
+                  <span class="survey-form__mark"></span>
+                  <span class="survey-form__tag survey-form__tag--checkbox">Сахарозаменитель</span>
+                </label>
+              </li>
+              <li class="survey-form__item">
+                <label class="survey-form__label survey-form__label--checkbox">
+                  <input class="visually-hidden survey-form__input" type="checkbox" name="drinking-water">
+                  <span class="survey-form__mark"></span>
+                  <span class="survey-form__tag survey-form__tag--checkbox">Питьевая вода</span>
+                </label>
+              </li>
+              <li class="survey-form__item">
+                <label class="survey-form__label survey-form__label--checkbox">
+                  <input class="visually-hidden survey-form__input" type="checkbox" name="milk">
+                  <span class="survey-form__mark"></span>
+                  <span class="survey-form__tag survey-form__tag--checkbox">Молоко</span>
+                </label>
+              </li>
+              <li class="survey-form__item">
+                <label class="survey-form__label survey-form__label--checkbox">
+                  <input class="visually-hidden survey-form__input" type="checkbox" name="vitamins">
+                  <span class="survey-form__mark"></span>
+                  <span class="survey-form__tag survey-form__tag--black">Витамины</span>
+                </label>
+              </li>
+            </ul>
           </div>
-          <ul class="survey-form__list survey-form__list--checkbox">
-            <li class="survey-form__item">
-              <label class="survey-form__label survey-form__label--checkbox">
-                <input class="visually-hidden survey-form__input survey-form__input--checkbox" type="checkbox" name="sweetener" checked>
-                <span class="survey-form__mark"></span>
-                <span class="survey-form__tag survey-form__tag--checkbox">Сахарозаменитель</span>
-              </label>
-            </li>
-            <li class="survey-form__item">
-              <label class="survey-form__label survey-form__label--checkbox">
-                <input class="visually-hidden survey-form__input" type="checkbox" name="drinking-water">
-                <span class="survey-form__mark"></span>
-                <span class="survey-form__tag survey-form__tag--checkbox">Питьевая вода</span>
-              </label>
-            </li>
-            <li class="survey-form__item">
-              <label class="survey-form__label survey-form__label--checkbox">
-                <input class="visually-hidden survey-form__input" type="checkbox" name="milk">
-                <span class="survey-form__mark"></span>
-                <span class="survey-form__tag survey-form__tag--checkbox">Молоко</span>
-              </label>
-            </li>
-            <li class="survey-form__item">
-              <label class="survey-form__label survey-form__label--checkbox">
-                <input class="visually-hidden survey-form__input" type="checkbox" name="vitamins">
-                <span class="survey-form__mark"></span>
-                <span class="survey-form__tag survey-form__tag--black">Витамины</span>
-              </label>
-            </li>
-          </ul>
         </div>
         <div class="survey-form__wrapper">
           <button class="button survey-form__btn" type="submit">Отправить заявку</button>
