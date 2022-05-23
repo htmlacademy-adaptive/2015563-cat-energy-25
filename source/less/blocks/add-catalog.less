@@ -1,75 +1,54 @@
 .add-catalog {
-  @media (min-width: @desktop-width) {
-    margin: 0 auto;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: 0;
+    height: 2px;
+    width: 100%;
+    background-color: @basic-green;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      top: 90px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 97px;
+    }
   }
 }
 
 .add-catalog__header {
-  margin: 0 auto;
-
-  @media (min-width: @tablet-width) {
-    padding-left: 30px;
-  }
-
   @media (min-width: @desktop-width) {
-    padding-left: 70px;
+    margin: 0 auto;
+    max-width: 1300px;
   }
 }
 
 .add-catalog__title {
   position: relative;
   display: inline-block;
-  margin: 25px 0 36px;
-  padding: 0 20px;
+  margin: 0 0 36px;
+  padding: 25px 20px 0;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
   background-color: @color-main-light;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
-    height: 2px;
-    width: 100vw;
-    background-color: @basic-green;
-    z-index: -1;
-  }
-
-  &--line {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 16px;
-      left: 0;
-      height: 2px;
-      width: 100vw;
-      background-color: @basic-green;
-      z-index: -1;
-    }
-  }
-
   @media (min-width: @tablet-width) {
-    margin: 68px 0 80px;
+    margin: 68px 30px 80px;
     padding: 0 37px;
     font-size: 36px;
     line-height: 36px;
-
-    &::before,
-    &::after {
-      top: 60%;
-    }
   }
 
   @media (min-width: @desktop-width) {
     margin: 76px 0 80px;
     padding: 0 39px;
-
-    &::before,
-    &::after {
-      top: 65%;
-    }
+    max-width: 1300px;
   }
 }
 
@@ -85,7 +64,8 @@
     grid-template-columns: 894px 245px;
     gap: 0 80px;
     margin-bottom: 85px;
-    padding: 0 110px;
+    padding: 0;
+    justify-content: center;
   }
 }
 
