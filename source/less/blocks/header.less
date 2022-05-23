@@ -1,9 +1,12 @@
 .header {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
+    position: static;
     width: 1440px;
     padding: 0 110px;
     margin: 0 auto;
@@ -94,7 +97,6 @@
   background-position: top center;
   background-size: cover;
   box-shadow: inset 0 0 0 100vw rgba(104, 183, 56, 0.85);
-  top: 66px;
   z-index: -1;
 
   @media (min-resolution: 2dppx) {
