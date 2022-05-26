@@ -165,6 +165,7 @@
   &--contact {
     display: flex;
     width: 100%;
+    margin-right: 0;
   }
 
   @media (min-width: @tablet-width) {
@@ -236,40 +237,35 @@
     }
   }
 
-  &--invalid {
+  &--invalid ~ .survey-form__icon--email,
+  &--invalid ~ .survey-form__icon--phone {
     outline: 2px solid @error;
-
-    & ~ .survey-form__icon--email {
-      stroke: @error;
-    }
-
-    & ~ .survey-form__icon--phone {
-      fill: @error;
-    }
+    stroke: @error;
+    fill: @error;
   }
 
   &:hover {
     outline: 1px solid @special-grey-light;
+  }
 
-    & ~ .survey-form__icon--email {
-      stroke: @special-grey;
-    }
+  &:hover ~ .survey-form__icon--email {
+    stroke: @special-grey;
+  }
 
-    & ~ .survey-form__icon--phone {
-      fill: @special-grey;
-    }
+  &:hover ~ .survey-form__icon--phone {
+    fill: @special-grey;
   }
 
   &:focus {
     outline: 2px solid @color-base;
+  }
 
-    & ~ .survey-form__icon--email {
-      stroke: @basic-green;
-    }
+  &:focus ~ .survey-form__icon--email {
+    stroke: @basic-green;
+  }
 
-    & ~ .survey-form__icon--phone {
-      fill: @basic-green;
-    }
+  &:focus ~ .survey-form__icon--phone {
+    fill: @basic-green;
   }
 
   @media (min-width: @tablet-width) {
@@ -316,6 +312,11 @@
   }
 }
 
+.survey-form__input[type="radio"]:focus ~ .survey-form__mark,
+.survey-form__input[type="radio"]:active ~ .survey-form__mark {
+  outline: 2px solid @color-base;
+}
+
 .survey-form__input[type="radio"]:checked + .survey-form__mark {
   background-image: url("../img/form/ellipse.svg");
   background-repeat: no-repeat;
@@ -332,6 +333,11 @@
   &:hover {
     border: 1px solid @special-grey-light2;
   }
+}
+
+.survey-form__input[type="checkbox"]:focus ~ .survey-form__mark,
+.survey-form__input[type="checkbox"]:active ~ .survey-form__mark {
+  outline: 2px solid @color-base;
 }
 
 .survey-form__input[type="checkbox"]:checked + .survey-form__mark {
@@ -404,6 +410,7 @@
 
 .survey-form__textarea {
   width: 100%;
+  resize: none;
   margin: 0 0 13px;
   padding: 10px 10px 15px;
   font-family: @font-oswald;
@@ -438,7 +445,7 @@
     width: 628px;
     flex-direction: row;
     margin: 0 auto;
-    padding: 38px 0 71px;
+    padding: 35px 0 71px;
     align-items: center;
   }
 

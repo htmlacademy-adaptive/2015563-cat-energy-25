@@ -1,4 +1,52 @@
 .main-header {
+  &--background {
+    position: relative;
+    display: block;
+
+    &::after {
+      position: absolute;
+      content: "";
+      min-height: 302px;
+      width: 100%;
+      left: 0;
+      background-image: url("../img/index/index-background-mobile.jpg");
+      background-size: cover;
+      background-position: 0%;
+      box-shadow: inset 0 0 0 100vw rgba(104, 183, 56, 0.85);
+      z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/index-background-mobile@2x.jpg");
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      &::after {
+        display: none;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &::after {
+        display: block;
+        width: 50%;
+        height: 694px;
+        background-image: url("../img/index/index-background-desktop.jpg");
+        background-size: cover;
+        background-position: 0%;
+        top: 0;
+        left: 50%;
+        z-index: -2;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/index/index-background-desktop@2x.jpg");
+        }
+      }
+    }
+  }
+}
+
+.main-header__container {
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -9,9 +57,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
-    padding: 0 110px;
-    margin: 53px auto 0;
+    width: 1300px;
+    padding: 53px 40px 0;
+    margin: 0 auto;
   }
 }
 

@@ -82,13 +82,13 @@
   @media (min-width: @tablet-width) {
     position: static;
     display: flex;
-    justify-content: space-between;
-    width: 441px;
+    flex-wrap: wrap;
+    width: 440px;
     background-color: transparent;
   }
 
   @media (min-width: @desktop-width) {
-    width: 483px;
+    width: 480px;
   }
 }
 
@@ -137,6 +137,10 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    &:not(:last-child) {
+      margin-right: 34px;
+    }
+
     &--active {
       position: relative;
 
