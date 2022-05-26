@@ -14,38 +14,39 @@
   </head>
 
   <body class="page__body">
-    <header class="main-header">
-      <div class="main-header__wrapper">
-        <a class="logo" href="#">
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.svg" width="202" height="59">
-            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg" width="174" height="52">
-            <img class="logo__image" src="img/logo/logo-mobile.svg" width="33" height="38" alt="Логотип.">
-          </picture>
-          <img class="logo__title logo__title--header" src="img/logo/logo-title.svg" width="101" height="18" alt="Магазин Кэт энерджи.">
-        </a>
+    <header class="main-header main-header--background">
+      <div class="main-header__container">
+        <div class="main-header__wrapper">
+          <a class="logo" href="#">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.svg" width="202" height="59">
+              <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg" width="174" height="52">
+              <img class="logo__image" src="img/logo/logo-mobile.svg" width="33" height="38" alt="Логотип.">
+            </picture>
+            <img class="logo__title logo__title--header" src="img/logo/logo-title.svg" width="101" height="18" alt="Магазин Кэт энерджи.">
+          </a>
+        </div>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="main-nav__list main-nav__list--light">
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="main-nav__list main-nav__list--light">
-          <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__link">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="page__main">
       <section class="header">
-        <div class="header__background-image"></div>
         <div class="header__wrapper">
           <h1 class="header__title">Функциональное питание для котов</h1>
           <p class="header__text">Занялся собой? Займись котом!</p>
@@ -153,8 +154,7 @@
             <div class="example__range-block">
               <button class="example__range example__range--before" type="button">Было</button>
               <div class="example__range-scale">
-                <div class="example__range-bar">
-                </div>
+                <button class="example__range-bar" type=""button></button>
               </div>
               <button class="example__range example__range--after" type="button">Стало</button>
             </div>
@@ -164,14 +164,16 @@
 
       <section class="location">
         <div class="location__address-wrapper">
-          <h2 class="location__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
-          <div class="location__address">
-            <p class="location__street">ул. Большая Конюшенная, д. 19/8</p>
-            <p class="location__city">Санкт-Петербург</p>
+          <div class="location__address-block">
+            <h2 class="location__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+            <div class="location__address">
+              <p class="location__street">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="location__city">Санкт-Петербург</p>
+            </div>
           </div>
         </div>
         <div class="location__map-wrapper">
-          <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная, 19/8, г.Санкт-Петербург">
+          <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="320" height="362" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная, 19/8, г.Санкт-Петербург">
           </iframe>
         </div>
       </section>
